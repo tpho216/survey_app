@@ -1,42 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import './firstscreen.dart';
-import './lastscreen.dart';
 import './thirdscreen.dart';
-import './secondscreen.dart';
-import 'package:flutter/services.dart';
 
-class MySurveyApp extends StatelessWidget {
-  
-  @override
-  Widget build(BuildContext context) {
+// A Widget that accepts the necessary arguments via the constructor.
 
-    // Set landscape orientation
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
-    return MaterialApp(
-  
-        title: 'Religion And Culture Survey',
-        home: HomeScreen(),
-        theme: ThemeData(fontFamily: 'Bunya'),
-        routes: {
-          FirstScreen.routeName: (context) =>
-              FirstScreen(),
-          LastScreen.routeName: (context) =>
-              LastScreen(),
-          SecondScreen.routeName: (context) =>
-              SecondScreen(),
-          ThirdScreen.routeName: (context) =>
-              ThirdScreen(),
-        });
-
-
-  }
-}
-
-class HomeScreen extends StatelessWidget {
+class LastScreen extends StatelessWidget {
   static const routeName = '/lastscreen';
   
   @override
@@ -80,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                 fontSize: 50.0,)
               ),
               onPressed: () {
-                Navigator.pushNamed(
+                Navigator.pop(
                   context,
                   ThirdScreen.routeName,
                 );
