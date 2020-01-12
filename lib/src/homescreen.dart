@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:survey_app/src/firstquestion.dart';
 import './firstscreen.dart';
 import './lastscreen.dart';
 import './thirdscreen.dart';
 import './secondscreen.dart';
 import 'package:flutter/services.dart';
+import './firstquestion.dart';
 
 class MySurveyApp extends StatelessWidget {
   
@@ -30,15 +32,15 @@ class MySurveyApp extends StatelessWidget {
               SecondScreen(),
           ThirdScreen.routeName: (context) =>
               ThirdScreen(),
+          FirstQuestion.routeName: (context) =>
+              FirstQuestion(),
         });
 
 
   }
 }
-
 class HomeScreen extends StatelessWidget {
-  static const routeName = '/lastscreen';
-  
+  static const routeName = '/homescreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +50,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Do you have a religion in Australia?', 
+              'Welcome to Religion and Culture Survey', 
               style: new TextStyle(
                 fontFamily: 'Bunya',
                 fontSize: 50.0,)
@@ -57,7 +59,7 @@ class HomeScreen extends StatelessWidget {
             // extracts the arguments by itself.
             RaisedButton(
               child: Text(
-                "Yes!",
+                "Take the survey!",
                 style: new TextStyle(
                 fontFamily: 'Bunya',
                 fontSize: 50.0,)
@@ -67,22 +69,7 @@ class HomeScreen extends StatelessWidget {
                 // and provide the arguments as an optional parameter.
                 Navigator.pushNamed(
                   context,
-                  FirstScreen.routeName,
-                );
-              },
-            ),
-            
-            RaisedButton(
-              child: Text(
-                "No",
-                style: new TextStyle(
-                fontFamily: 'Bunya',
-                fontSize: 50.0,)
-              ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  ThirdScreen.routeName,
+                  FirstQuestion.routeName,
                 );
               },
             ),

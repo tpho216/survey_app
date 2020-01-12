@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:survey_app/src/lastscreen.dart';
 import './homescreen.dart';
 // A Widget that accepts the necessary arguments via the constructor.
 
@@ -79,7 +80,7 @@ class _SecondQuestionState extends State<SecondScreen> {
               onPressed: () {
                 Navigator.pushNamed(
                   context,
-                  HomeScreen.routeName,
+                  LastScreen.routeName,
                 );
               },
             ),

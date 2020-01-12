@@ -55,7 +55,23 @@ class FirstScreen extends StatelessWidget {
                 );
               },
             ),
+          
 
+            
+             RaisedButton(
+              child: Text(
+              'Others', 
+              style: new TextStyle(
+                fontFamily: 'Bunya',
+                fontSize: 50.0,)
+                ),
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  ThirdScreen.routeName,
+                );
+              },
+            ),
 
           ],
       ),

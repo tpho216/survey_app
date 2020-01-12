@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:survey_app/src/firstquestion.dart';
-import './firstquestion.dart';
+import 'package:flutter/rendering.dart';
+import './firstscreen.dart';
+import './thirdscreen.dart';
 
 
-// A Widget that accepts the necessary arguments via the constructor.
-
-class LastScreen extends StatelessWidget {
-  static const routeName = '/lastscreen';
+class FirstQuestion extends StatelessWidget {
+  static const routeName = '/firstquestion';
   
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class LastScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Welcome to Religion and Culture Survey', 
+              'Do you have a religion in Australia?', 
               style: new TextStyle(
                 fontFamily: 'Bunya',
                 fontSize: 50.0,)
@@ -26,7 +25,7 @@ class LastScreen extends StatelessWidget {
             // extracts the arguments by itself.
             RaisedButton(
               child: Text(
-                "Take the survey!",
+                "Yes!",
                 style: new TextStyle(
                 fontFamily: 'Bunya',
                 fontSize: 50.0,)
@@ -36,7 +35,22 @@ class LastScreen extends StatelessWidget {
                 // and provide the arguments as an optional parameter.
                 Navigator.pushNamed(
                   context,
-                  FirstQuestion.routeName,
+                  FirstScreen.routeName,
+                );
+              },
+            ),
+            
+            RaisedButton(
+              child: Text(
+                "No",
+                style: new TextStyle(
+                fontFamily: 'Bunya',
+                fontSize: 50.0,)
+              ),
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  ThirdScreen.routeName,
                 );
               },
             ),
@@ -46,5 +60,6 @@ class LastScreen extends StatelessWidget {
       ),
     );
   }
+
 
 }
