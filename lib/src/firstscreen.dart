@@ -4,7 +4,7 @@ import './secondscreen.dart';
 
 // A Widget that extracts the necessary arguments from the ModalRoute.
 class FirstScreen extends StatelessWidget {
-  static const routeName = '/firstscreen';
+  static const routeName = '/firstscreenhe';
 
   @override
   Widget build(BuildContext context) {

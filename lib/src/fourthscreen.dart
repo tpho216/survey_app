@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:survey_app/src/fourthscreen.dart';
 import 'package:survey_app/src/lastscreen.dart';
 import './homescreen.dart';
 // A Widget that accepts the necessary arguments via the constructor.
 
 // A Widget that accepts the necessary arguments via the constructor.
-class SecondScreen extends StatefulWidget {
-  static const routeName = '/secondscreen';
-  SecondScreen({Key key}) : super(key: key);
+class FourthScreen extends StatefulWidget {
+  static const routeName = '/FourthScreen';
+  FourthScreen({Key key}) : super(key: key);
 
   @override
 _SecondQuestionState createState() => _SecondQuestionState();
@@ -16,7 +15,7 @@ _SecondQuestionState createState() => _SecondQuestionState();
 }
 enum SingingCharacter { readbible, prayer, fellowship }
   
-class _SecondQuestionState extends State<SecondScreen> {
+class _SecondQuestionState extends State<FourthScreen> {
   
   SingingCharacter _character = SingingCharacter.readbible;
 

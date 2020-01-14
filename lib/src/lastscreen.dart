@@ -17,29 +17,11 @@ class LastScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Welcome to Religion and Culture Survey', 
+              'Thank You For taking The Survey', 
               style: new TextStyle(
                 fontFamily: 'Bunya',
                 fontSize: 50.0,)
                 ),
-            // A button that navigates to a named route that. The named route
-            // extracts the arguments by itself.
-            RaisedButton(
-              child: Text(
-                "Take the survey!",
-                style: new TextStyle(
-                fontFamily: 'Bunya',
-                fontSize: 50.0,)
-              ),
-              onPressed: () {
-                // When the user taps the button, navigate to a named route
-                // and provide the arguments as an optional parameter.
-                Navigator.pushNamed(
-                  context,
-                  FirstQuestion.routeName,
-                );
-              },
-            ),
 
           ],
         ),

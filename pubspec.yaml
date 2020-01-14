@@ -39,10 +39,21 @@ flutter:
     - family: Bunya
       fonts:
         - asset: fonts/BunyaPersonalRegular.ttf
+    - family: Soul
+      fonts: 
+        - asset: fonts/SoulOfYou.ttf
+          weight: 200
+    - family: the_skinny
+      fonts: 
+        - asset: fonts/the_skinny/TheSkinny.otf
+    
+        
   assets: 
     - assets/heart.png
     - assets/heart_half.png
     - assets/heart_border.png
+    - assets/checklist.png
+    - assets/meetup.png
   
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
