@@ -54,7 +54,8 @@ flutter:
     - assets/heart_border.png
     - assets/checklist.png
     - assets/meetup.png
-  
+    - assets/lifestyle.jpg
+    - assets/popcorn_logo.PNG
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

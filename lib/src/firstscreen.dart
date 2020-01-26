@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:survey_app/src/lastscreen.dart';
 import './thirdscreen.dart';
 import './secondscreen.dart';
 
@@ -17,61 +18,40 @@ class FirstScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
 
-               Text(
-              'What Religion is it?', 
-              style: new TextStyle(
-                fontFamily: 'Bunya',
-                fontSize: 50.0,)
-                ),
+            Text(
+          'What Habits do you currently have?', 
+          style: new TextStyle(
+            fontFamily: 'Bunya',
+            fontSize: 50.0,)
+            ),
+        
+            TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                labelText: 'Enter a your current habits'
+              ),
+              style: TextStyle(fontSize: 30)
+            ),
 
-            RaisedButton(
-              child:  Text(
-              'Christianity', 
-              style: new TextStyle(
-                fontFamily: 'Bunya',
-                fontSize: 50.0,)
-                ),
-              onPressed: () {
-                // When the user taps the button, navigate to a named route
-                // and provide the arguments as an optional parameter.
-                Navigator.pushNamed(
-                  context,
-                  SecondScreen.routeName,
-                );
-              },
-            ),
-            
-            RaisedButton(
-              child: Text(
-              'Buddhism', 
-              style: new TextStyle(
-                fontFamily: 'Bunya',
-                fontSize: 50.0,)
-                ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  ThirdScreen.routeName,
-                );
-              },
-            ),
-          
-
-            
-             RaisedButton(
-              child: Text(
-              'Others', 
-              style: new TextStyle(
-                fontFamily: 'Bunya',
-                fontSize: 50.0,)
-                ),
-              onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  ThirdScreen.routeName,
-                );
-              },
-            ),
+             Expanded(flex: 1, 
+                  child: Stack(
+                      children: [
+                        Positioned(
+                          bottom: 20,
+                          right: 30,
+                          child: 
+                            RaisedButton(
+                              child:  Text('Finish Survey', style: new TextStyle(fontFamily: 'Soul', fontSize: 50.0,)), onPressed: () 
+                                { Navigator.pushNamed(
+                                    context,
+                                    LastScreen.routeName,
+                                 );
+                                },
+                            ),
+                        )
+                      ]
+                    )
+                  )
 
           ],
       ),
